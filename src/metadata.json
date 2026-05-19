@@ -1,0 +1,9 @@
+{
+  "uuid": "topspot@cahtarevic.ermin",
+  "name": "TopSpot",
+  "description": "Displays the currently focused application name in the top panel.",
+  "shell-version": ["45", "46"],
+  "version": 1,
+  "url": "https://github.com/cahtarevic/topspot-gnome",
+  "settings-schema": "org.gnome.shell.extensions.topspot"
+}

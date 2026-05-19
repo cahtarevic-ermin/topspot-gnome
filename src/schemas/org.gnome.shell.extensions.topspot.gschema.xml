@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.topspot"
+          path="/org/gnome/shell/extensions/topspot/">
+
+    <key name="show-icon" type="b">
+      <default>false</default>
+      <summary>Show application icon</summary>
+      <description>Display the focused application's icon next to its name.</description>
+    </key>
+
+    <key name="max-label-width" type="i">
+      <default>200</default>
+      <summary>Maximum label width</summary>
+      <description>Maximum width in pixels before the label is truncated with an ellipsis.</description>
+    </key>
+
+    <key name="show-on-desktop" type="b">
+      <default>true</default>
+      <summary>Show label on desktop</summary>
+      <description>Show "Desktop" when no window is focused. If disabled, the label is hidden.</description>
+    </key>
+
+  </schema>
+</schemalist>
