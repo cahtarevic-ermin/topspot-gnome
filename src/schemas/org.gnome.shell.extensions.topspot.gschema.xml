@@ -21,5 +21,11 @@
       <description>Show "Desktop" when no window is focused. If disabled, the label is hidden.</description>
     </key>
 
+    <key name="spotify-enabled" type="b">
+      <default>true</default>
+      <summary>Enable Spotify plugin</summary>
+      <description>Show Spotify playback controls and track info in the panel.</description>
+    </key>
+
   </schema>
 </schemalist>

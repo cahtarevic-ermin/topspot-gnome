@@ -9,3 +9,32 @@
   margin-right: 4px;
   icon-size: 16px;
 }
+
+.topspot-separator {
+  width: 1px;
+  margin: 4px 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.topspot-spotify-box {
+  spacing: 2px;
+}
+
+.topspot-spotify-label {
+  margin-left: 6px;
+  max-width: 250px;
+  font-size: 13px;
+}
+
+.topspot-spotify-btn {
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
+.topspot-spotify-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.topspot-spotify-btn-icon {
+  icon-size: 14px;
+}

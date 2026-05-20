@@ -6,6 +6,7 @@ import St from 'gi://St';
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 import * as PanelMenu from 'resource:///org/gnome/shell/ui/panelMenu.js';
 import {Extension} from 'resource:///org/gnome/shell/extensions/extension.js';
+import {SpotifyPlugin} from './plugins/spotify.js';
 
 const TopSpotIndicator = GObject.registerClass(
 class TopSpotIndicator extends PanelMenu.Button {
@@ -95,9 +96,19 @@ export default class TopSpotExtension extends Extension {
         this._settings = this.getSettings();
         this._indicator = new TopSpotIndicator(this._settings);
         Main.panel.addToStatusArea('topspot', this._indicator, 1, 'left');
+
+        this._plugins = [new SpotifyPlugin()];
+        for (const plugin of this._plugins)
+            plugin.enable(this._indicator._box, this._settings);
     }
 
     disable() {
+        if (this._plugins) {
+            for (const plugin of this._plugins.reverse())
+                plugin.disable();
+            this._plugins = null;
+        }
+
         this._indicator?.destroy();
         this._indicator = null;
         this._settings = null;

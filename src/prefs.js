@@ -50,5 +50,17 @@ export default class TopSpotPreferences extends ExtensionPreferences {
         });
         settings.bind('show-on-desktop', showOnDesktopRow, 'active', Gio.SettingsBindFlags.DEFAULT);
         behaviorGroup.add(showOnDesktopRow);
+
+        const pluginsGroup = new Adw.PreferencesGroup({
+            title: 'Plugins',
+        });
+        page.add(pluginsGroup);
+
+        const spotifyRow = new Adw.SwitchRow({
+            title: 'Spotify Controls',
+            subtitle: 'Show playback controls and track info when Spotify is running',
+        });
+        settings.bind('spotify-enabled', spotifyRow, 'active', Gio.SettingsBindFlags.DEFAULT);
+        pluginsGroup.add(spotifyRow);
     }
 }
