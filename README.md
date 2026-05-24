@@ -25,7 +25,7 @@ Built-in plugin that shows playback controls and track info whenever Spotify is 
 ## Install
 
 ```bash
-git clone https://github.com/cahtarevic/topspot-gnome.git
+git clone https://github.com/cahtarevic-ermin/topspot-gnome.git
 cd topspot-gnome
 chmod +x scripts/install.sh
 ./scripts/install.sh
